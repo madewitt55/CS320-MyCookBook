@@ -1,0 +1,29 @@
+@model List<MyCookBookApp.Models.Recipe>
+<div class="container mt-5">
+ <h1 class="display-4 text-center mb-4">Recipes</h1>
+ <div class="row">
+ @if (Model != null && Model.Any())
+ {
+ foreach (var recipe in Model)
+ {
+ <div class="col-md-6 mb-4">
+ <div class="card">
+ <div class="card-body">
+ <h5 class="card-title">@recipe.name</h5>
+ <p class="cardtext"><strong>Ingredients:</strong> @string.Join(", ",
+recipe.ingredients)</p>
+ <p class="cardtext"><strong>Steps:</strong> @recipe.steps</p>
+ </div>
+ </div>
+ </div>
+ }
+ }
+ else
+ {
+    <div class="col-12">
+ <p class="text-center">No recipes available at the
+moment. Please check back later!</p>
+ </div>
+ }
+ </div>
+</div>
