@@ -1,0 +1,17 @@
+﻿@model List<MyCookBookApp.Models.Recipe>
+<style>
+    .button-container {
+        text-align:center;
+    }
+    .recipe-button,.recipe-button:hover {
+        background-color: #8db2cc;
+    }
+</style>
+<div class="container mt-5">
+    <h1 class="display-4 text-center mb-4">Welcome to MyCookBook</h1>
+    <div class="row">
+        <div class="container button-container mt-5">
+            <a class="btn btn-primary btn-lg" asp-area="" asp-controller="Recipe" asp-action="Index">View Recipes</a>
+        </div>
+    </div>
+</div>
